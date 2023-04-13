@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ably Chat</title>
+    
+    <script src="https://cdn.ably.io/lib/ably.min-1.js" lang="text/javascript"></script>
+    <script src="https://cdn.skypack.dev/ably-chat-component" type="module"></script>
+</head>
+<style>
+    body {
+        background-color: #f1f1f1;
+        display: flex;
+        justify-content: center;
+    }
+
+</style>
+<body>
+    <div style="justify-content: center; display: flex">
+        <ably-chat
+            data-get-token-url="/auth"
+            data-subscribe-channel="chat:to-clients"
+            data-publish-channel="chat:from-clients">
+        </ably-chat>
+    </div>
+</body>
+</html>
